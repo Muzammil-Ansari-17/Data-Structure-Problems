@@ -1,4 +1,4 @@
-package org.example;
+package org.example.Array;
 //24F-CS-154
 //Muzammil Ahmed
 

@@ -103,6 +103,5 @@ public class Insertion {
             obj.dispaly();
             obj.insertatindex(5,90);
             obj.dispaly();
-
     }
 }

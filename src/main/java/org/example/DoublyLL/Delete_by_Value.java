@@ -55,7 +55,8 @@ public class Delete_by_Value {
             current.prev = tail;
             tail.next = null;
 
-        }else{
+        }
+        else{
             current.prev.next = current.next;
             current.next.prev = current.prev;
         }

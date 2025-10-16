@@ -26,19 +26,17 @@ public class RemoveDuplicate {
             head.prev = newnode;
             head = newnode;
         }
-
     }
     public void removeduplicate(){
         Node current = head;
         while(current != null){
             Node comp = current.next;
-
             while(comp != null){
                 if(comp.data == current.data){
                         if(comp.next != null){
                             comp.prev.next = comp.next;
                         }
-                        comp = comp.next;
+                     comp = comp.next;
                 }
                 current = current.next;
             }
@@ -71,6 +69,5 @@ public class RemoveDuplicate {
         obj.dispaly();
         obj.removeduplicate();
         obj.dispaly();
-
     }
 }

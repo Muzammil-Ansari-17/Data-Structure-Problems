@@ -1,5 +1,6 @@
 package org.example.DoublyLL;
-
+//Muzammil Ahmed
+//24F-cs-154
 public class RemoveDuplicate {
     Node head;
     Node tail;
@@ -18,20 +19,58 @@ public class RemoveDuplicate {
     public void addfirst(int data){
         Node newnode = new Node(data);
         if(head == null){
-            head = head.next;
-            return;
+            head = newnode;
+            tail = newnode;
         }else{
-
+            newnode.next = head;
+            head.prev = newnode;
+            head = newnode;
         }
 
     }
     public void removeduplicate(){
-        if(head == null){
+        Node current = head;
+        while(current != null){
+            Node comp = current.next;
 
+            while(comp != null){
+                if(comp.data == current.data){
+                        if(comp.next != null){
+                            comp.prev.next = comp.next;
+                        }
+                        comp = comp.next;
+                }
+                current = current.next;
+            }
+        }
+    }
+    public void dispaly(){
+        if(head == null){
+            System.out.println("list doesnot exist.");
+        }else{
+            Node current = head;
+            System.out.print(" Null");
+            while(current != null){
+                System.out.print(" -> "+current.data);
+                current = current.next;
+            }
+            System.out.println(" Null");
         }
     }
 
     public static void main(String[] args) {
+        RemoveDuplicate obj = new RemoveDuplicate();
+        obj.addfirst(34);
+        obj.addfirst(32);
+        obj.addfirst(23);
+        obj.addfirst(76);
+        obj.addfirst(91);
+        obj.addfirst(68);
+        obj.addfirst(34);
+        obj.addfirst(40);
+        obj.dispaly();
+        obj.removeduplicate();
+        obj.dispaly();
 
     }
 }

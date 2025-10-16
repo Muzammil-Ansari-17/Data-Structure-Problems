@@ -49,7 +49,6 @@ public class Delete_by_Value {
             }else{
                 tail = null;
             }
-
         }
         else if(current == tail){
             current.prev = tail;

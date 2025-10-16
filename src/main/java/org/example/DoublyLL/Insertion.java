@@ -91,7 +91,6 @@ public class Insertion {
             System.out.println(" Null");
         }
     }
-
     public static void main(String[] args) {
             Insertion obj = new Insertion();
             obj.addfirst(44);

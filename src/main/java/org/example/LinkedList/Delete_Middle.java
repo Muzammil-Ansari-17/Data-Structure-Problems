@@ -1,7 +1,8 @@
 package org.example.LinkedList;
 
 import java.util.Scanner;
-
+//Muzammil Ahmed
+//24F-CS-154
 public class Delete_Middle {
     Node head;
     class Node{

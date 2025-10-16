@@ -44,6 +44,18 @@ public class Searching_LL {
             }
 
     }
+    public void display(){
+        if(head == null){
+            System.out.println("list does not exist");
+        }
+        Node current = head;
+        while(current != null){
+            System.out.print(current.data+" -> ");
+            current = current.next;
+        }
+        System.out.println("Null");
+
+    }
 
     public static void main(String[] args) {
 
@@ -58,6 +70,7 @@ public class Searching_LL {
             obj.addfirst(27);
             obj.addfirst(99);
             obj.addfirst(75);
+            obj.display();
 
             obj.search(key);
 

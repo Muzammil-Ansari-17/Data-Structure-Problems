@@ -71,11 +71,8 @@ public class Merge_LL {
         }
     }
 
-
-
     public static void main(String[] args) {
         System.out.println("List 1");
-
         Merge_LL obj1 = new Merge_LL();
         obj1.addfirst(33);
         obj1.addfirst(57);
@@ -83,9 +80,7 @@ public class Merge_LL {
         obj1.addfirst(90);
         obj1.addfirst(64);
         obj1.display();
-
         System.out.println("List 2");
-
         Merge_LL obj2 = new Merge_LL();
         obj2.addfirst(15);
         obj2.addfirst(74);
@@ -93,18 +88,12 @@ public class Merge_LL {
         obj2.addfirst(82);
         obj2.addfirst(12);
         obj2.display();
-
         Merge_LL Merge = new Merge_LL();
         Merge.head = Merge.merge(obj1.head,obj2.head);
         System.out.println("Merged list");
-
         Merge.display();
-
         System.out.println("sorting LL");
         Merge.bubblesort();
         Merge.display();
-
-
-
     }
 }

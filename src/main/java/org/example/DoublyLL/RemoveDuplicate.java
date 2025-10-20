@@ -28,27 +28,20 @@ public class RemoveDuplicate {
         }
 
     }
-    public void removeduplicate() {
+    public void removeduplicate(){
         Node current = head;
-
-        while (current != null) {
+        while(current != null){
             Node comp = current.next;
-            while (comp != null) {
-                if (comp.data == current.data) {
-                    // Remove the duplicate node
-                    if (comp.next != null) {
-                        comp.next.prev = comp.prev;
-                    } else {
-                        // comp is tail
-                        tail = comp.prev;
-                    }
-                    if (comp.prev != null) {
-                        comp.prev.next = comp.next;
-                    }
+
+            while(comp != null){
+                if(comp.data == current.data){
+                        if(comp.next != null){
+                            comp.prev.next = comp.next;
+                        }
+                        comp = comp.next;
                 }
-                comp = comp.next; // move inner loop forward
+                current = current.next;
             }
-            current = current.next; // move outer loop forward after inner loop finishes
         }
     }
     public void dispaly(){

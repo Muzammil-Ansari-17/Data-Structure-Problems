@@ -1,6 +1,6 @@
 package org.example.DoublyLL;
 
-
+//Muzammil Ahmed
     class patient {
         int p_id;
         String p_name;

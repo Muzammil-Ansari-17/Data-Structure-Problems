@@ -1,5 +1,5 @@
 package org.example.DoublyLL;
-
+//Muzammil Ahmed
 public class Delete_by_Value {
     Node head;
     Node tail;
@@ -53,15 +53,12 @@ public class Delete_by_Value {
         else if(current == tail){
             current.prev = tail;
             tail.next = null;
-
         }
         else{
             current.prev.next = current.next;
             current.next.prev = current.prev;
         }
-
-        System.out.println("Deleted node is " +key);
-
+       System.out.println("Deleted node is " +key);
     }
     public void dispaly(){
         if(head == null){
@@ -84,8 +81,6 @@ public class Delete_by_Value {
         obj.addfirst(67);
         obj.addfirst(21);
         obj.dispaly();
-
-
         obj.delete(67);
         obj.dispaly();
     }

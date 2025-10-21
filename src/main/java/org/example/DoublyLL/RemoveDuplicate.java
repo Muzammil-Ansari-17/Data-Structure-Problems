@@ -28,22 +28,26 @@ public class RemoveDuplicate {
         }
 
     }
-    public void removeduplicate(){
+    public void removeduplicate() {
         Node current = head;
-        while(current != null){
-            Node comp = current.next;
 
-            while(comp != null){
-                if(comp.data == current.data){
-                        if(comp.next != null){
-                            comp.prev.next = comp.next;
-                        }
-                        comp = comp.next;
+        while (current != null) {
+            Node comp = current.next;
+            while (comp != null) {
+                if (comp.data == current.data) {
+                    if (comp.next != null) {
+                        comp.next.prev = comp.prev;
+                    } else {
+                        tail = comp.prev;
+                    }
+                    comp.prev.next = comp.next;
                 }
-                current = current.next;
+                comp = comp.next;
             }
+            current = current.next;
         }
     }
+
     public void dispaly(){
         if(head == null){
             System.out.println("list doesnot exist.");

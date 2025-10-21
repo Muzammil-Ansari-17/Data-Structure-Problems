@@ -67,7 +67,6 @@ public class Insertion {
                 }
             }
                 Node nextnode = current.next;
-
                 newnode.next = nextnode;
                 newnode.prev = current;
                 current.next = newnode;

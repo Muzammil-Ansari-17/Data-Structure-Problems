@@ -1,5 +1,7 @@
 package org.example.Stack;
 
+
+
 public class StackLL {
     Node head;
     class Node{
@@ -13,22 +15,34 @@ public class StackLL {
         }
 
     }
+    Node top = null;
     public void push(int data){
-    Node newnode = new Node(data);
-        if(head == null){
-            head = newnode;
-            return;
+
+         Node newnode = new Node(data);
+        if(top == null){
+            top = newnode;
+
         }else{
-            newnode.next = head;
-            head = newnode;
+            newnode.next = top;
+            top = newnode;
         }
     }
 
     public void pop(){
-        int top = -1;
+        if(top == null){
+            System.out.println("stack underflow");
+        }else{
+            System.out.println(top.data);
+            top = top.next;
+        }
+    }
 
-        if(top == )
-
+    public void peek(){
+        if(top == null){
+            System.out.println("stack underflow");
+            return;
+        }
+        System.out.println(top.data);
     }
 
 
@@ -36,11 +50,11 @@ public class StackLL {
     public static void main(String[] args) {
     StackLL obj = new StackLL();
     obj.push(10);
-    obj.push(22);
+    obj.push(12);
     obj.push(24);
     obj.pop();
     obj.pop();
-
-
+    obj.peek();
+    obj.pop();
     }
 }

@@ -4,10 +4,7 @@
  */
 package org.example.Stack;
 
-/**
- *
- * @author HAROON TRADERS
- */
+
 public class StackDynamic {
     
     class Node{
@@ -31,17 +28,25 @@ public class StackDynamic {
             newNode.next = top;
             top = newNode;
         }
-            
     }
     
     public void pop(){
         if(top==null){
-        
             System.out.println("Stack Underflow");
         }else{
             System.out.println("pop:    "+top.data);
             top = top.next;
         }
         
+    }
+
+    public static void main(String[] args) {
+        StackDynamic obj = new StackDynamic();
+        obj.push(10);
+        obj.push(11);
+        obj.push(12);
+        obj.push(13);
+        obj.pop();
+        obj.pop();
     }
 }

@@ -3,7 +3,6 @@ package org.example.Stack;
 
 
 public class StackLL {
-    Node head;
     class Node{
         int data;
         Node next;

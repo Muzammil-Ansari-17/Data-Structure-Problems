@@ -1,7 +1,5 @@
 package org.example.Stack;
 
-
-
 public class StackLL {
     class Node{
         int data;
@@ -10,17 +8,14 @@ public class StackLL {
         Node(int data){
             this.data = data;
             this.next = null;
-
         }
-
     }
+
     Node top = null;
     public void push(int data){
-
          Node newnode = new Node(data);
         if(top == null){
             top = newnode;
-
         }else{
             newnode.next = top;
             top = newnode;

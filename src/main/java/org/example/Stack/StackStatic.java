@@ -4,10 +4,7 @@
  */
 package org.example.Stack;
 
-/**
- *
- * @author HAROON TRADERS
- */
+
 public class StackStatic {
     int stackArr[];
     int top;
@@ -32,23 +29,29 @@ public class StackStatic {
             System.out.println("Stack Underflow");
             return;
         }else{
-        
-            System.out.println("pop:    "+stackArr[top--]);
+            System.out.println("pop:  "+stackArr[top--]);
         }
-       
     }
     public boolean isFull(){
-    
         if(top==stackArr.length)
             return true;
         else
             return false;
     }
+
     public boolean isEmpty(){
-    
         if(top==-1)
             return true;
         else
             return false;
+    }
+
+    public static void main(String[] args) {
+        StackStatic obj = new StackStatic(5);
+        obj.push(55);
+        obj.push(67);
+        obj.isEmpty();
+        obj.pop();
+        obj.pop();
     }
 }

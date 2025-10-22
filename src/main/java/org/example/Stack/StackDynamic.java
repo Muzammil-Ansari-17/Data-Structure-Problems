@@ -18,9 +18,8 @@ public class StackDynamic {
     } // end of node
     
     Node top = null;
-    
+
     public void push(int item){
-    
         Node newNode = new Node(item);
         if(top==null)
             top = newNode;

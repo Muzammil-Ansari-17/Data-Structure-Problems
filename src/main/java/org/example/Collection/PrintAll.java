@@ -13,7 +13,6 @@ public class PrintAll <T>{
         this.st = st;
     }
     public void display(){
-    
         System.out.println(st);
     }
 }

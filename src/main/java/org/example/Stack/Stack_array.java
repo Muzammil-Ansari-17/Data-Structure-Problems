@@ -1,7 +1,7 @@
 package org.example.Stack;
 
 public class Stack_array {
-        int stackarr[];
+        int[] stackarr;
         int top;
 
         Stack_array(int sizeofarray){

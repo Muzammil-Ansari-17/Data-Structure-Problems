@@ -22,13 +22,11 @@ class Arrayinput {
 
     }
 
-
     public void display(){
         for (int i = 0; i < count; i++) {
             System.out.println(myarr[i]);
         }
     }
-
 
     public static class Array_Search_By_Index extends Array_Size_by_User {
         int num;

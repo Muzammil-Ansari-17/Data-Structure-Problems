@@ -1,4 +1,4 @@
-package org.example.rough;
+package org.example.Others;
 
 public class Array {
         private int arr[];

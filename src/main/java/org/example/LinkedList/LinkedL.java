@@ -36,6 +36,8 @@ public class LinkedL {
 
         }
 
+
+
         public void print(){
            if(head == null){
                System.out.println("list is empty");

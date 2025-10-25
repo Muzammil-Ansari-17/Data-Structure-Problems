@@ -56,7 +56,6 @@ public class Merge_LL {
             System.out.println("list does not exist.");
             return;
         }
-
         Node i,j;
         int temp;
         for (i = head; i !=null; i = i.next) {

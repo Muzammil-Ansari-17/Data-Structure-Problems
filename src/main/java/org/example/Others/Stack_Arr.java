@@ -14,7 +14,7 @@ public class Stack_Arr {
             System.out.println("stack is overflow");
             return;
         }else{
-            arr[top++] = data;
+            arr[++top] = data;
 
         }
     }
@@ -43,6 +43,20 @@ public class Stack_Arr {
         }
     }
     public static void main(String[] args) {
+        Stack_Arr obj = new Stack_Arr(10);
+        obj.push(33);
+        obj.push(35);
+        obj.push(36);
+        obj.push(38);
+        obj.push(32);
+        obj.pop();
+        obj.pop();
+        obj.pop();
+        obj.pop();
+        obj.pop();
+        obj.pop();
+        obj.pop();
+        obj.pop();
 
     }
 }

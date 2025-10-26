@@ -43,8 +43,12 @@ public class DoublyLL {
            if(head == null){
                System.out.println("list does not exist");
                return;
-           }else{
+           }if(head == tail){
+               head = tail = null;
+           }
+           else{
                head= head.next;
+               head.prev = null;
            }
        }
 
@@ -60,9 +64,35 @@ public class DoublyLL {
                current.next = null;
                tail = current;
            }
-
        }
 
+       public void insert_mid(int index,int data){
+           int count = 0;
+           Node current = head;
+           Node newnode = new Node(data);
+           if(head == null){
+               System.out.println("list does not exist");
+               return;
+           } if (index == 0) {
+               addfirst(data);
+               return;
+           } if (current == null || current.next == null) {
+               addlast(data);
+               return;
+           } else{
+               for ( int i = 0; i < index -1; i++) {
+                   if(current.next != null){
+                       current = current.next;
+                   }
+               }
+               Node nextnode = current.next;
+               newnode.next = nextnode;
+               nextnode.prev = newnode;
+               newnode.prev = current;
+               current.next = newnode;
+           }
+           count++;
+       }
         public void display(){
            if(head == null){
                System.out.println("list does not exist");
@@ -89,6 +119,10 @@ public class DoublyLL {
         obj.display();
         System.out.println();
         obj.removelast();
+        obj.display();
+        System.out.println();
+        obj.insert_mid(0,45);
+        obj.insert_mid(1,47);
         obj.display();
 
     }

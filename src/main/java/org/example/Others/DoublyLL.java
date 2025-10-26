@@ -115,7 +115,6 @@ public class DoublyLL {
            return count;
         }
 
-
     public static void main(String[] args) {
         DoublyLL obj = new DoublyLL();
         obj.addfirst(56);

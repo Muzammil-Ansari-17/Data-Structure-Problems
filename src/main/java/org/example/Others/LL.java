@@ -144,7 +144,6 @@ public class LL {
             return l1;
 
         }
-
         public void bubblesort(){
             if(head == null){
                 System.out.println("list doest not exist");
@@ -212,6 +211,7 @@ public class LL {
             head = prev;
             return prev;
         }
+
 
     public static void main(String[] args) {
         LL obj = new LL();

@@ -195,15 +195,24 @@ public class LL {
             }
         }
 
-//    public void binarysearch(int value){
-//        if(head == null){
-//            System.out.println("list does not exist");
-//            return;
-//        }
-//        Searching_LL.Node low = head;
-//        Searching_LL.Node high = null;
-//
-//    }
+        public Node reverseLL(){
+            if(head == null){
+                System.out.println("list does not exist");
+                return null;
+            }
+            Node prev = null;
+            Node current = head;
+            Node next = null;
+            while(current != null){
+                next = current.next;
+                current.next = prev;
+                prev = current;
+                current = next;
+            }
+            head = prev;
+            return prev;
+        }
+
     public static void main(String[] args) {
         LL obj = new LL();
         obj.addfirst(22);
@@ -235,6 +244,9 @@ public class LL {
         obj.linearsearch(54);
         System.out.println();
         obj.remove_duplicate();
+        obj.display();
+        System.out.println();
+        obj.reverseLL();
         obj.display();
     }
 }

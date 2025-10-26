@@ -1,5 +1,7 @@
 package org.example.Others;
 
+import org.example.LinkedList.Searching_LL;
+
 public class LL {
     Node head;
     public class Node{
@@ -128,18 +130,80 @@ public class LL {
             return count;
         }
 
-        public void merge(Node l1,Node l2){
+        public Node merge(Node l1,Node l2){
+            if (l1 == null){
+                return l2;
+            } else if (l2 == null) {
+                return l1;
+            }
+            Node temp = l1;
+            while(temp.next != null){
+                temp = temp.next;
+            }
+            temp.next = l2;
+            return l1;
+
+        }
+
+        public void bubblesort(){
+            if(head == null){
+                System.out.println("list doest not exist");
+                return;
+            }
+            Node i,j;
+            int temp;
+            for ( i = head; i != null ; i = i.next) {
+                for (j = head; j.next != null ; j = j.next) {
+                    if(j.data > j.next.data){
+                        temp = j.data;
+                        j.data = j.next.data;
+                        j.next.data = temp;
+                    }
+                }
+            }
+        }
+
+        public void linearsearch(int value){
             if(head == null){
                 System.out.println("list does not exist");
                 return;
             }
             Node current = head;
+            int count = 0;
             while(current != null){
+                if(current.data == value){
+                    System.out.println("Found "+current.data+" at "+count);
+                    return;
+                }
+                count++;
                 current = current.next;
             }
-
+            System.out.println(" not found ");
         }
 
+        public void remove_duplicate(){
+            if(head == null){
+                System.out.println("list doesnot exist");
+                return;
+            }
+            Node current = head;
+            while(current != null && current.next!=null){
+                if(current.data == current.next.data){
+                    current.next = current.next.next;
+                }
+                current = current.next;
+            }
+        }
+
+//    public void binarysearch(int value){
+//        if(head == null){
+//            System.out.println("list does not exist");
+//            return;
+//        }
+//        Searching_LL.Node low = head;
+//        Searching_LL.Node high = null;
+//
+//    }
     public static void main(String[] args) {
         LL obj = new LL();
         obj.addfirst(22);
@@ -147,6 +211,8 @@ public class LL {
         obj.addfirst(25);
         obj.addfirst(27);
         obj.addlast(54);
+        obj.addlast(78);
+        obj.addlast(78);
         obj.addlast(78);
         obj.removefirst();
         obj.removelast();
@@ -162,5 +228,13 @@ public class LL {
         obj.display();
         System.out.println();
         System.out.println("No of Nodes are :"+obj.countnode());
+        System.out.println();
+        obj.bubblesort();
+        obj.display();
+        System.out.println();
+        obj.linearsearch(54);
+        System.out.println();
+        obj.remove_duplicate();
+        obj.display();
     }
 }

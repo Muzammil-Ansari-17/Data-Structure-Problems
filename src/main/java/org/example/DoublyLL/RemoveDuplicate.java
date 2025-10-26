@@ -31,21 +31,21 @@ public class RemoveDuplicate {
     public void removeduplicate() {
         Node current = head;
 
-        while (current != null) {
-            Node comp = current.next;
-            while (comp != null) {
-                if (comp.data == current.data) {
-                    if (comp.next != null) {
-                        comp.next.prev = comp.prev;
-                    } else {
-                        tail = comp.prev;
-                    }
-                    comp.prev.next = comp.next;
-                }
-                comp = comp.next;
-            }
-            current = current.next;
-        }
+      while (current != null){
+          Node comp = current.next;
+          while(comp != null){
+              if(current.data == comp.data){
+                  if(comp.next != null){
+                      comp.next.prev = comp.prev;
+                  }else{
+                      tail = tail.prev;
+                  }
+                  comp.next.prev = comp.next;
+              }
+              comp = comp .next;
+          }
+          current = current.next;
+      }
     }
 
     public void dispaly(){

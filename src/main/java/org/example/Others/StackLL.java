@@ -1,6 +1,6 @@
 package org.example.Others;
 
-public class Stack {
+public class StackLL {
     Node top = null;
     class Node{
         int data;
@@ -40,7 +40,7 @@ public class Stack {
     }
 
     public static void main(String[] args) {
-        Stack obj = new Stack();
+        StackLL obj = new StackLL();
         obj.push(89);
         obj.push(10);
         obj.peek();

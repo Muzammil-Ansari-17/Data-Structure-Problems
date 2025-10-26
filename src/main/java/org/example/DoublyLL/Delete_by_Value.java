@@ -60,6 +60,7 @@ public class Delete_by_Value {
         }
        System.out.println("Deleted node is " +key);
     }
+
     public void dispaly(){
         if(head == null){
             System.out.println("list doesnot exist.");

@@ -105,6 +105,17 @@ public class DoublyLL {
            }
         }
 
+        public int countnode(){
+           int count = 0;
+           Node current = head;
+           while (current != null){
+               count++;
+               current = current.next;
+           }
+           return count;
+        }
+
+
     public static void main(String[] args) {
         DoublyLL obj = new DoublyLL();
         obj.addfirst(56);
@@ -126,6 +137,9 @@ public class DoublyLL {
         System.out.println();
         obj.insert_mid(8,90);
         obj.display();
+        System.out.println();
+        System.out.println("no of nodes :"+obj.countnode());
+
 
     }
 }

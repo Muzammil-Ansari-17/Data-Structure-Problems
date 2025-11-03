@@ -56,12 +56,12 @@ public class binary_sort {
     public static void main(String[] args) {
             binary_sort obj = new binary_sort();
             obj.addfirst(22);
-        obj.addfirst(76);
-        obj.addfirst(91);
-        obj.addfirst(81);
-        obj.addfirst(-1);
-        obj.display();
-        obj.bubblesort();
-        obj.display();
+            obj.addfirst(76);
+            obj.addfirst(91);
+            obj.addfirst(81);
+            obj.addfirst(-1);
+            obj.display();
+            obj.bubblesort();
+            obj.display();
     }
 }

@@ -36,6 +36,7 @@ public class Check_paranthesis{
         }
     }
 
+
     public static boolean isbalanced(String expr){
         stack obj = new stack(100);
 

@@ -1,65 +1,28 @@
 package Dsa_Practice.Stack;
 
-public class Static_Stack_Overflow {
+public class Static_Stack_Overflow{
+    int top;
+    int[] arr = new int[5];
 
-//  Buggy Version
-//    class stack {
-//        int top;
-//        int[] arr = new int[5];
-//
-//        stack(){
-//            top  = 0; ---> this.top = -1;
-//        }
-//        void push(int data){
-//            if(top == arr.length){
-//                System.out.println("Stack overflow");
-//                return;
-//            }else{
-//                arr[top++]; ----> top++
-//                arr[top] = data;
-//            }
-//        }
-//    }
+    Static_Stack_Overflow(){
+        top = -1;
+    }
 
-    //Corrected version
-
-    public static class Stack{
-        int top;
-        int[] arr = new int[5];
-
-        Stack(){
-            this.top = -1;
-        }
-        public void push(int data){
-            if(top == arr.length){
-                System.out.println("stack is overflowed");
-                return;
-            }else{
-                top++;
-                arr[top] = data;
-            }
-        }
-        public void display(){
-            if(top == arr.length){
-                System.out.println("stack overflow");
-                return;
-            }else{
-                for (int i = 0; i < arr.length; i++) {
-                    System.out.println(arr[i]);
-                }
-            }
+    void push(int data){
+        if(top == arr.length){
+            System.out.println("Stack overflow");
+        }else{
+            top++;
+            arr[top] = data;
         }
     }
 
     public static void main(String[] args) {
-            Stack obj = new Stack();
-            obj.push(22);
-            obj.push(22);
-            obj.push(22);
-            obj.push(22);
-            obj.push(22);
-            obj.display();
-
-
+            Static_Stack_Overflow st = new Static_Stack_Overflow();
+            st.push(57);
+            st.push(87);
+            st.push(97);
+            st.push(10);
+            st.push(79);
     }
 }

@@ -38,7 +38,7 @@ public class Check_paranthesis{
 
 
     public static boolean isbalanced(String expr){
-        stack obj = new stack(100);
+        stack obj =  new stack(100);
 
         for (char ch : expr.toCharArray()) {
             if(ch == '(' || ch == '{' || ch == '['){

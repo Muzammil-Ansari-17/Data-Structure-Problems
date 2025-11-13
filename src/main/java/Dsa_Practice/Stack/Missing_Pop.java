@@ -39,7 +39,6 @@ public class Missing_Pop {
                 top--;
             }
         }
-
     }
 
     public static void main(String[] args) {

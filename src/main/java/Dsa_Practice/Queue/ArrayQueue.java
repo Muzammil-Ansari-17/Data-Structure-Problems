@@ -10,6 +10,7 @@ public class ArrayQueue {
             arr = new int[size];
             this.size = size;
         }
+
         public boolean isEmpty(){
             return rear == -1;
         }

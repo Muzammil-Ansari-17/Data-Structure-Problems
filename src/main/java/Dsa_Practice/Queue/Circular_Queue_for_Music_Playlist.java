@@ -29,19 +29,48 @@ public class Circular_Queue_for_Music_Playlist {
                     rear = newNode;
                     rear.next = front;
                 }
-                System.out.println(Song+ " Added to Queue");
+                System.out.println(Song+ " Added to Playlist");
             }
 
-            Public void PlaySong(){
+            public void PlaySong(){
                 if(isEmpty()){
-                    System.out.println("Song Queue is Empty");
+                    System.out.println("Playlist is Empty");
                     return;
-                } else if () {
-                    
+                } else {
+                    System.out.println(front.Song+" is Playing");
+                    try {
+                        Thread.sleep(100000);
+                    } catch (InterruptedException e) {
+                        throw new RuntimeException(e);
+                    }
+                    front = front.next;
+                }
+            }
+
+            public void DisplayPlaylist(){
+                if(isEmpty()){
+                    System.out.println("PlayList is Empty");
+                    return;
+                }else{
+                    System.out.println("Your Music Playlist is...");
+                    Node current = front;
+                    int i = 1;
+                    while(current != null){
+                        System.out.println("Song"+i+" :"+current.Song);
+                        i++;
+                        current = current.next;
+                    }
                 }
             }
         }
+
     public static void main(String[] args) {
+        CircularQueue queue = new CircularQueue();
+        queue.AddSong("“Hall of Fame” – The Script ft. Will.i.am");
+        queue.AddSong("“Believer” – Imagine Dragons");
+        queue.AddSong("“The Nights” – Avicii");
+        queue.AddSong("“On My Way” – Alan Walker");
+        queue.AddSong("“Firework” – Katy Perry");
 
     }
 }

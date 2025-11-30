@@ -12,7 +12,7 @@ public class CPU_Scheduling_With_Priority_Queue {
                 this.priority = priority;
             }
 
-            public String toSring() {
+            public String toString() {
                 return name;
             }
         }
@@ -27,7 +27,7 @@ public class CPU_Scheduling_With_Priority_Queue {
             PriorityQueue<CPU_P> Display = new PriorityQueue<>(pqueue);
 
             while(!Display.isEmpty()){
-                System.out.print(Display.poll().toSring());
+                System.out.print(Display.poll().toString());
                 System.out.print(" -> ");
             }
 

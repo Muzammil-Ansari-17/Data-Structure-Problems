@@ -14,6 +14,7 @@ public class Circular_Queue_for_Music_Playlist {
         public static class CircularQueue{
             Node front = null;
             Node rear = null;
+            int countsong = 1;
 
             public boolean isEmpty(){
                 return front ==  null;
@@ -37,12 +38,18 @@ public class Circular_Queue_for_Music_Playlist {
                     System.out.println("Playlist is Empty");
                     return;
                 } else {
-                    System.out.println(front.Song+" is Playing");
-                    try {
-                        Thread.sleep(100000);
-                    } catch (InterruptedException e) {
-                        throw new RuntimeException(e);
-                    }
+                    System.out.println(+countsong+": Next Song :"+front.Song);
+                    countsong++;
+                    front = front.next;
+                }
+            }
+
+            public void currentPlaying(){
+                if(isEmpty()){
+                    System.out.println("Song playlist is Empty.");
+                    return;
+                }else {
+                    System.out.println("Currently Playing Song :"+front.Song);
                     front = front.next;
                 }
             }
@@ -55,11 +62,12 @@ public class Circular_Queue_for_Music_Playlist {
                     System.out.println("Your Music Playlist is...");
                     Node current = front;
                     int i = 1;
-                    while(current != null){
-                        System.out.println("Song"+i+" :"+current.Song);
-                        i++;
+                    do{
+                        System.out.println("Song"+i+": "+current.Song);
                         current = current.next;
-                    }
+                        i++;
+
+                    }while (current != front);
                 }
             }
         }
@@ -71,6 +79,21 @@ public class Circular_Queue_for_Music_Playlist {
         queue.AddSong("“The Nights” – Avicii");
         queue.AddSong("“On My Way” – Alan Walker");
         queue.AddSong("“Firework” – Katy Perry");
+        System.out.println();
+
+        queue.DisplayPlaylist();
+        System.out.println();
+
+        queue.currentPlaying();
+        System.out.println();
+
+        queue.PlaySong();
+        queue.PlaySong();
+        queue.PlaySong();
+        queue.PlaySong();
+        queue.PlaySong();
+        queue.PlaySong();
+        queue.PlaySong();
 
     }
 }

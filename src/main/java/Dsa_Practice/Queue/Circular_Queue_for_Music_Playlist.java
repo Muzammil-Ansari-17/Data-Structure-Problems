@@ -49,7 +49,9 @@ public class Circular_Queue_for_Music_Playlist {
                     System.out.println("Song playlist is Empty.");
                     return;
                 }else {
+                    System.out.println("------------------------------------------------------------------");
                     System.out.println("Currently Playing Song :"+front.Song);
+                    System.out.println("------------------------------------------------------------------");
                     front = front.next;
                 }
             }
@@ -74,6 +76,8 @@ public class Circular_Queue_for_Music_Playlist {
 
     public static void main(String[] args) {
         CircularQueue queue = new CircularQueue();
+
+        System.out.println();
         queue.AddSong("“Hall of Fame” – The Script ft. Will.i.am");
         queue.AddSong("“Believer” – Imagine Dragons");
         queue.AddSong("“The Nights” – Avicii");

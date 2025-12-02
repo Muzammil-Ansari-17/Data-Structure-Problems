@@ -1,40 +1,40 @@
-package Dsa_Practice.Tree;
+import Dsa_Practice.Tree.BinaryTree;
+import Dsa_Practice.Tree.Node;
 
-public class Tree_Main {
+public static void main(String[] args) {
+    BinaryTree tree = new BinaryTree();
 
-    public static void main(String[] args) {
+    Node first = new Node(10);
+    Node second = new Node(20);
+    Node third = new Node(30);
+    Node four = new Node(40);
+    Node five = new Node(50);
+    Node six = new Node(60);
+    Node seven = new Node(70);
+    Node eight = new Node(80);
+    Node nine = new Node(90);
 
-        BinaryTree tree = new BinaryTree();
+    tree.root = first;
 
-        Node first = new Node(10);
-        Node second = new Node(20);
-        Node third = new Node(30);
-        Node four = new Node(40);
-        Node five = new Node(50);
-        Node six = new Node(60);
-        Node seven = new Node(70);
-        Node eight = new Node(80);
+    first.left = second;
+    first.right = third;
 
-        tree.root = first;
-        first.left = second;
-        first.right = third;
+    second.left = four;
+    second.right = five;
 
-        second.left = four;
-        second.right = five;
+    third.left = six;
+    third.right = seven;
 
-        third.left = six;
-        third.right = seven;
+    four.left = eight;
+    four.right = nine;
 
-        four.left = eight;
 
-        System.out.println();
-        System.out.println("Post-Order Traversal:");
-        tree.postOrderTT(tree.root);
+    System.out.println("Pre Order Traversal.");
+    tree.preOrderTT(tree.root);
 
-        System.out.println("\n\nIn-Order Traversal:");
-        tree.inOrderTT(tree.root);
+    System.out.println("\n\nIn Order Traversal");
+    tree.inOrder(tree.root);
 
-        System.out.println("\n\nPre-Order Traversal:");
-        tree.preOrderTT(tree.root);
-    }
+    System.out.println("\n\nPost Order Traversal");
+    tree.postOrder(tree.root);
 }

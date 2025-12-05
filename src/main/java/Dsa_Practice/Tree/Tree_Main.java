@@ -37,4 +37,7 @@ public static void main(String[] args) {
 
     System.out.println("\n\nPost Order Traversal");
     tree.postOrder(tree.root);
+
+    System.out.println("\n\nLevel Order Traversal");
+    tree.LevelOrder(tree.root);
 }

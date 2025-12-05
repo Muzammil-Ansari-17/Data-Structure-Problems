@@ -10,7 +10,7 @@ public class BinaryTree{
         this.root = null;
     }
 
-//    Tree Traversals (Pre, Mid, Post)
+//    Tree Traversals (Pre, Mid, Post, Level)
 //    ⭐ 1. PREORDER (Root → Left → Right)
 
     public void preOrderTT(Node node){
@@ -45,6 +45,7 @@ public class BinaryTree{
         }
     }
 
+    //    ⭐ 4. LevelOrder (Print Nodes Row By Row)
     public void LevelOrder(Node node){
         if(node == null){
             return;
@@ -72,6 +73,17 @@ public class BinaryTree{
                 }
             }
         }
+    }
+
+//    Count Of Nodes
+    public int CountNodes(Node root){
+        if(root == null){
+            return 0;
+        }
+            int leftNode = CountNodes(root.left);
+            int rightNode = CountNodes(root.right);
+
+           return leftNode + rightNode + 1;
     }
 
 }

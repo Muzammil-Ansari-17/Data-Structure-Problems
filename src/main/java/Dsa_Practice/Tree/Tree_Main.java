@@ -36,5 +36,12 @@ public class Tree_Main {
 
         System.out.println("\n\nPre-Order Traversal:");
         tree.preOrderTT(tree.root);
+
+        System.out.println("\n\nLevel order Traversal");
+        tree.LevelOrderTraversal(tree.root);
+
+
+        System.out.println("\n\nCount Nodes");
+        tree.countNodes(tree.root);
     }
 }

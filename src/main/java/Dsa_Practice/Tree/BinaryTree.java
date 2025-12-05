@@ -6,33 +6,46 @@ import java.util.Queue;
 public class BinaryTree {
 
     public Node root;
+public class BinaryTree{
+     public Node root;
 
     public BinaryTree() {
         this.root = null;
     }
 
-    public void preOrderTT(Node node) {
-        if (node == null) return;
+//    Tree Traversals (Pre, Mid, Post)
+//    ⭐ 1. PREORDER (Root → Left → Right)
 
-        System.out.print(node.data + " ");
-        preOrderTT(node.left);
-        preOrderTT(node.right);
+    public void preOrderTT(Node node){
+        if(node == null){
+            return;
+        }else{
+            System.out.print(node.data+" ");
+            preOrderTT(node.left);
+            preOrderTT(node.right);
+        }
     }
 
-    public void inOrderTT(Node node) {
-        if (node == null) return;
-
-        inOrderTT(node.left);
-        System.out.print(node.data + " ");
-        inOrderTT(node.right);
+//    ⭐ 2. INORDER (Left → Root → Right)
+    public void inOrder(Node node){
+        if(node == null){
+            return;
+        }else{
+            inOrder(node.left);
+            System.out.print(node.data+" ");
+            inOrder(node.right);
+        }
     }
 
-    public void postOrderTT(Node node) {
-        if (node == null) return;
-
-        postOrderTT(node.left);
-        postOrderTT(node.right);
-        System.out.print(node.data + " ");
+//    ⭐ 3. POSTORDER (Left → Right → Root)
+    public void postOrder(Node node){
+        if(node == null){
+            return;
+        }else {
+            postOrder(node.left);
+            postOrder(node.right);
+            System.out.print(node.data+" ");
+        }
     }
 
     public void LevelOrderTraversal(Node root){

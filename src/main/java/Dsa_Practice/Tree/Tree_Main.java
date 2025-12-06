@@ -41,7 +41,13 @@ public static void main(String[] args) {
     System.out.println("\n\nLevel Order Traversal");
     tree.LevelOrder(tree.root);
 
-    System.out.println("\n\nCount Node Traversal");
+    System.out.println("\n\nCount of Node Traversal");
     int NodeCount = tree.CountNodes(tree.root);
     System.out.println("Num of Nodes are :"+NodeCount);
+
+    System.out.println("\n\nSum of Node Traversal");
+    int NodeSum = tree.SumNodes(tree.root);
+    System.out.println("Sum of Nodes are :"+NodeSum);
+
+
 }

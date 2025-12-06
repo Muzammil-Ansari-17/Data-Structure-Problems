@@ -49,5 +49,8 @@ public static void main(String[] args) {
     int NodeSum = tree.SumNodes(tree.root);
     System.out.println("Sum of Nodes are :"+NodeSum);
 
+    System.out.println("\n\nHeight of Tree");
+    int HofTree = tree.HeightOfTree(tree.root);
+    System.out.println(HofTree);
 
 }

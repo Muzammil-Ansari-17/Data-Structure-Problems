@@ -97,4 +97,21 @@ public class BinaryTree{
         return leftSum + rightSum + root.data;
     }
 
+//    Height of Tree
+    public int HeightOfTree(Node root){
+        int maxHeight = 0;
+        if(root == null){
+            return 0;
+        }else {
+            int leftHeight = HeightOfTree(root.left);
+            int rightHeight = HeightOfTree(root.right);
+
+            if(leftHeight > rightHeight){
+                    maxHeight = leftHeight + 1;
+                }else {
+                    maxHeight = rightHeight + 1;
+            }
+        }
+        return maxHeight;
+    }
 }

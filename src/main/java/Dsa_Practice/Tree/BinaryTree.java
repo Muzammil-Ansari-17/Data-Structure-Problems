@@ -6,11 +6,6 @@ import java.util.Queue;
 public class BinaryTree {
 
     public Node root;
-import java.util.LinkedList;
-import java.util.Queue;
-
-public class BinaryTree{
-     public Node root;
 
     public BinaryTree() {
         this.root = null;
@@ -19,82 +14,82 @@ public class BinaryTree{
 //    Tree Traversals (Pre, Mid, Post, Level)
 //    ⭐ 1. PREORDER (Root → Left → Right)
 
-    public void preOrderTT(Node node){
-        if(node == null){
+    public void preOrderTT(Node node) {
+        if (node == null) {
             return;
-        }else{
-            System.out.print(node.data+" ");
+        } else {
+            System.out.print(node.data + " ");
             preOrderTT(node.left);
             preOrderTT(node.right);
         }
     }
 
-//    ⭐ 2. INORDER (Left → Root → Right)
-    public void inOrder(Node node){
-        if(node == null){
+    //    ⭐ 2. INORDER (Left → Root → Right)
+    public void inOrder(Node node) {
+        if (node == null) {
             return;
-        }else{
+        } else {
             inOrder(node.left);
-            System.out.print(node.data+" ");
+            System.out.print(node.data + " ");
             inOrder(node.right);
         }
     }
 
-//    ⭐ 3. POSTORDER (Left → Right → Root)
-    public void postOrder(Node node){
-        if(node == null){
+    //    ⭐ 3. POSTORDER (Left → Right → Root)
+    public void postOrder(Node node) {
+        if (node == null) {
             return;
-        }else {
+        } else {
             postOrder(node.left);
             postOrder(node.right);
-            System.out.print(node.data+" ");
+            System.out.print(node.data + " ");
         }
     }
 
     //    ⭐ 4. LevelOrder (Print Nodes Row By Row)
-    public void LevelOrder(Node node){
-        if(node == null){
+    public void LevelOrder(Node node) {
+        if (node == null) {
             return;
         }
         Queue<Node> q = new LinkedList<>();
         q.add(root);
         q.add(null);
 
-        while(!q.isEmpty()){
+        while (!q.isEmpty()) {
             Node current = q.remove();
-            if(current == null){
+            if (current == null) {
                 System.out.println();
-                if(q.isEmpty()){
+                if (q.isEmpty()) {
                     break;
-                }else{
+                } else {
                     q.add(null);
                 }
-            }else{
-                System.out.print(current.data+" ");
-                if(current.left != null){
+            } else {
+                System.out.print(current.data + " ");
+                if (current.left != null) {
                     q.add(current.left);
                 }
-                if (current.right != null){
+                if (current.right != null) {
                     q.add(current.right);
                 }
             }
         }
     }
 
-//    Count Of Nodes
-    public int CountNodes(Node root){
-        if(root == null){
+    //    Count Of Nodes
+    public int CountNodes(Node root) {
+        if (root == null) {
             return 0;
         }
-            int leftNode = CountNodes(root.left);
-            int rightNode = CountNodes(root.right);
+        int leftNode = CountNodes(root.left);
+        int rightNode = CountNodes(root.right);
 
-           return leftNode + rightNode + 1;
+        return leftNode + rightNode + 1;
     }
 
-//    Sum of Nodes
-    public int SumNodes(Node root){
-        if(root == null){
+    //    Sum of Nodes
+    public int SumNodes(Node root) {
+        if (root == null) {
             return 0;
         }
         int leftSum = SumNodes(root.left);
@@ -103,63 +98,22 @@ public class BinaryTree{
         return leftSum + rightSum + root.data;
     }
 
-//    Height of Tree
-    public int HeightOfTree(Node root){
+    //    Height of Tree
+    public int HeightOfTree(Node root) {
         int maxHeight = 0;
-        if(root == null){
+        if (root == null) {
             return 0;
-        }else {
+        } else {
             int leftHeight = HeightOfTree(root.left);
             int rightHeight = HeightOfTree(root.right);
 
-            if(leftHeight > rightHeight){
-                    maxHeight = leftHeight + 1;
-                }else {
-                    maxHeight = rightHeight + 1;
+            if (leftHeight > rightHeight) {
+                maxHeight = leftHeight + 1;
+            } else {
+                maxHeight = rightHeight + 1;
             }
         }
         return maxHeight;
     }
 
-    public void LevelOrderTraversal(Node root){
-
-        if(root == null){
-            return;
-        }
-        Queue<Node> q = new LinkedList<>();
-        q.add(root);
-        q.add(null);
-
-        while(!q.isEmpty()){
-            Node current = q.remove();
-            if(current == null){
-                System.out.println();
-                if(q.isEmpty()){
-                    break;
-                }else {
-                    q.add(null);
-                }
-            }else{
-                System.out.print(current.data+" ");
-                if(current.left != null){
-                    q.add(current.left);
-                }if(current.right != null){
-                    q.add(current.right);
-                }
-            }
-        }
-    }
-
-    public void countNodes(Node node){
-        int count = 1;
-        if(node == null){
-            return;
-        }else{
-            count++;
-            countNodes(node.left);
-
-            System.out.println(count);
-        }
-
-    }
 }

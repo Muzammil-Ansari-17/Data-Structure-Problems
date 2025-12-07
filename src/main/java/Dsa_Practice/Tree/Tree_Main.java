@@ -35,20 +35,22 @@ public static void main(String[] args) {
     System.out.println("\n\nIn Order Traversal");
     tree.inOrder(tree.root);
 
-<<<<<<< HEAD
-        System.out.println("\n\nPre-Order Traversal:");
-        tree.preOrderTT(tree.root);
-
-        System.out.println("\n\nLevel order Traversal");
-        tree.LevelOrderTraversal(tree.root);
-
-
-        System.out.println("\n\nCount Nodes");
-        tree.countNodes(tree.root);
-    }
-}
-=======
     System.out.println("\n\nPost Order Traversal");
     tree.postOrder(tree.root);
+
+    System.out.println("\n\nLevel Order Traversal");
+    tree.LevelOrder(tree.root);
+
+    System.out.println("\n\nCount of Node Traversal");
+    int NodeCount = tree.CountNodes(tree.root);
+    System.out.println("Num of Nodes are :"+NodeCount);
+
+    System.out.println("\n\nSum of Node Traversal");
+    int NodeSum = tree.SumNodes(tree.root);
+    System.out.println("Sum of Nodes are :"+NodeSum);
+
+    System.out.println("\n\nHeight of Tree");
+    int HofTree = tree.HeightOfTree(tree.root);
+    System.out.println(HofTree);
+
 }
->>>>>>> origin/main

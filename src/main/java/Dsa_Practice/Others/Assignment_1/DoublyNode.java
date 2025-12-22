@@ -1,14 +1,14 @@
 package Dsa_Practice.Others.Assignment_1;
 
 public class DoublyNode {
-    public class DoublyList(){
-        String item;
-        DoublyList(String item){
-            this.item = item;
+        char data;
+        DoublyNode next;
+        DoublyNode prev;
+
+        DoublyNode(char data){
+            this.data = data;
+            this.next = null;
+            this.prev = null;
         }
-
     }
-    public static void main() {
 
-    }
-}

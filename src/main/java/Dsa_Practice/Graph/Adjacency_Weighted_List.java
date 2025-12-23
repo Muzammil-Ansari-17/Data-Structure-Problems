@@ -45,11 +45,11 @@ public class Adjacency_Weighted_List {
         ArrayList<Edge> [] graph = new ArrayList[v];
 
         createGraph(graph);
-
+        System.out.println("source destination weight ");
         for (int i = 0; i < graph.length; i++) {
             for (int j = 0; j < graph[i].size(); j++) {
                 Edge e = graph[i].get(j);
-                System.out.println(i+ " :"+ e.destination+" " +e.weight);
+                System.out.println(" "+i+ "         "+ e.destination+"        " +e.weight);
 
             }
         }

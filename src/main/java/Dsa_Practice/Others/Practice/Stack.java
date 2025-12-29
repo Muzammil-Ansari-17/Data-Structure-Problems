@@ -46,11 +46,44 @@ public class Stack {
             System.out.print(top.data);
 
     }
-
-//    Stack using Array
-
-
     public static void main(String[] args) {
 
     }
 }
+
+
+//    Stack using Array
+    public static class StaticStack{
+        int[] arr;
+        int top;
+
+        StaticStack(int size){
+            this.arr = new int[size];
+            this.top = -1;
+
+        }
+    public boolean StaticisEmpty(){
+        if(top == -1){
+            return true;
+        }
+        return false;
+    }
+
+    public boolean StaticisFull(){
+        if(top == arr.length){
+            
+        }
+    }
+    public static StaticPush(int data){
+        if()
+    }
+
+    static void main() {
+
+    }
+    }
+
+
+
+
+

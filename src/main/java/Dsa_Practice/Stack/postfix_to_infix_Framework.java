@@ -2,7 +2,7 @@ package Dsa_Practice.Stack;
 
 import java.util.Stack;
 
-public class infix_to_postfix_Framework {
+public class postfix_to_infix_Framework {
 
     // Function to check if a character is operator
     static boolean isOperator(char c) {

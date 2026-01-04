@@ -12,8 +12,12 @@ public class Practice3 {
             this.marks = marks;
         }
 
-        public String toString(){
-            return name+" "+ marks;
+        @Override
+        public String toString() {
+            return "PQ{" +
+                    "name='" + name + '\'' +
+                    ", marks=" + marks +
+                    '}';
         }
     }
 

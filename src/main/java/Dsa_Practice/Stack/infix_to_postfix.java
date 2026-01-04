@@ -4,14 +4,14 @@ import java.util.Stack;
 
 public class infix_to_postfix {
 
-    public int precedence(char c){
+    public  static int precedence(char c){
         if(c == '+' || c == '-') return 1;
         if(c == '*' || c == '/') return 2;
         if(c == '^') return 3;
         return -1;
     }
 
-    static String infixToPostfix(String infix) {
+    public static String infixToPostfix(String infix) {
         Stack<Character> st = new Stack<>();
 
         String postfix = "";
@@ -19,6 +19,9 @@ public class infix_to_postfix {
         for (int i = 0; i < infix.length(); i++) {
             char c = infix.charAt(i);
 
+            if(c == ' ') {
+                continue;
+            }
 //            1️⃣ Operand check
             if(Character.isLetterOrDigit(c)){
                 postfix = postfix + c;
@@ -31,25 +34,27 @@ public class infix_to_postfix {
 
 //            3️⃣ Closing bracket )
             else if(c == ')'){
-                while (!st.isEmpty() && st.pop() != '(' ){
-                    postfix = postfix + c;
+                while (!st.isEmpty() && st.peek() != '(' ){
+                    postfix += st.pop();
                 }
                 st.pop(); // remove '('
 
 //             4️⃣ Operator case
             } else {
                 while (!st.isEmpty() && precedence(st.peek()) >= precedence(c)){
-                    postfix = st.pop();
+                    postfix += st.pop();
                 }
                 st.push(c);
             }
 
-//            5️⃣ Bache huay operators
-            while (!st.isEmpty()){
-                postfix += st.pop();
-            }
-            return postfix;
+
         }
+
+        // 5 Bache huay operators
+        while (!st.isEmpty()){
+            postfix += st.pop();
+        }
+        return postfix;
 
 
     }
@@ -57,7 +62,7 @@ public class infix_to_postfix {
     public static void main(String[] args) {
 
         String exp = "4 + 5 / 6 - 7 * 9 + 1";
-        int result = infix_to_postfix(exp);
+        String result = infixToPostfix(exp);
         System.out.println(result);
 
     }

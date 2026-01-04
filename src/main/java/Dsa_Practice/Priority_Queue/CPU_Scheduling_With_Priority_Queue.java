@@ -1,4 +1,4 @@
-package Dsa_Practice.Queue;
+package Dsa_Practice.Priority_Queue;
 import java.util.PriorityQueue;
 
 public class CPU_Scheduling_With_Priority_Queue {

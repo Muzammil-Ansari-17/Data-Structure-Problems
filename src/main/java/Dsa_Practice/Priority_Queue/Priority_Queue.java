@@ -1,6 +1,5 @@
-package Dsa_Practice.Queue;
+package Dsa_Practice.Priority_Queue;
 
-import java.util.Collection;
 import java.util.Collections;
 import java.util.PriorityQueue;
 

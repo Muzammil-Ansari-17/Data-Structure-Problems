@@ -15,6 +15,8 @@ public class Practice3 {
 
     public static void main(String[] args) {
         PriorityQueue<PQ> pq = new PriorityQueue<>((a,b) -> a.marks - b.marks);
-        pq.add("Muzamm")
+        pq.add(new PQ("Muzammil",98));
+        pq.add(new PQ("Ahmed",98));
+        pq.add(new PQ("Faraz",98));
     }
 }

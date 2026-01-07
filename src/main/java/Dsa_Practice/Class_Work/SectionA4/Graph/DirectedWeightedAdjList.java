@@ -33,7 +33,7 @@ public class DirectedWeightedAdjList {
             System.out.println("Invalid Vertex");
         }
     }
-    
+
     public void addEdge(int u, int v, int w){
     
         Edge edge = new Edge(u, v, w);

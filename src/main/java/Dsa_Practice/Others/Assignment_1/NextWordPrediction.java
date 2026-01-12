@@ -19,7 +19,6 @@ public class NextWordPrediction {
         }
     }
 
-
     public Node createLLFromData(String data) {
         String[] word = data.split("\\s+");
         Node head = null;

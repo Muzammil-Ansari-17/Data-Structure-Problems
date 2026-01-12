@@ -33,7 +33,6 @@ public class undirected_Adjacency_List {
     }
     public static void main(String[] args) {
         int v = 6;
-
         ArrayList<Edge>[] graph = new ArrayList[v];
         creategraph(graph);
 
